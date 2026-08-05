@@ -1,0 +1,11 @@
+package com.halil.api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HalilApiApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(HalilApiApplication.class, args);
+	}
+}
