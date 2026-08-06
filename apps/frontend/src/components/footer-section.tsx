@@ -121,7 +121,7 @@ export function Footer() {
             <div className="mb-10 md:mb-0">
               <h3 className="text-xs font-bold">{dynamicFooterLinks[0].label}</h3>
               <ul className="text-white mt-4 space-y-2 text-sm">
-                {dynamicFooterLinks[0].links.map((link) => (
+                {dynamicFooterLinks[0].links.map((link: any) => (
                   <li key={link.title}>
                     <a
                       href={link.href}
@@ -144,7 +144,7 @@ export function Footer() {
                     {section.label}
                   </h3>
                   <ul className="text-white mt-4 space-y-2 text-sm">
-                    {section.links.map((link) => (
+                    {section.links.map((link: any) => (
                       <li key={link.title}>
                         <a
                           href={link.href}
