@@ -2,6 +2,8 @@ import { products } from "@/data/products";
 import type { Metadata } from "next";
 import ProductPage from "./ProductPage";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {
