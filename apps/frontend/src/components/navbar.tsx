@@ -111,7 +111,7 @@ const Navbar = ({
 
   return (
     <section className="bg-[#ebc834] dark:bg-slate-900 text-slate-900 dark:text-white border-b dark:border-slate-800 select-none transition-colors duration-300">
-      <div className="container max-w-none w-full py-1 px-10 md:px-20">
+      <div className="container max-w-none w-full py-1.5 px-3 sm:px-6 md:px-20">
         <nav className="hidden justify-between lg:flex ">
           <div className="flex items-center gap-6 ">
             <a href={logo.url} className="flex items-center gap-2">
@@ -163,29 +163,33 @@ const Navbar = ({
           </div>
         </nav>
         <div className="block lg:hidden">
-          <div className="flex items-center justify-between">
-            <a href={logo.url} className="flex items-center gap-2">
+          <div className="flex items-center justify-between gap-1.5">
+            <a href={logo.url} className="flex items-center gap-2 shrink-0">
               {logo.src && (
                 <img
                   src={logo.src}
-                  className="w-17 bg-[#e4c84d] dark:bg-slate-800 p-1 rounded"
+                  className="w-14 sm:w-17 bg-[#e4c84d] dark:bg-slate-800 p-1 rounded"
                   alt={logo.alt}
                 />
               )}
-              <span className="text-lg font-semibold">{logo.title}</span>
+              <span className="text-base sm:text-lg font-semibold">{logo.title}</span>
             </a>
-            <span className="flex items-center gap-1 text-sm whitespace-nowrap font-semibold">
+            
+            <a 
+              href="tel:+33620357667"
+              className="flex items-center gap-1 bg-slate-950/10 hover:bg-slate-950/20 px-2 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-colors"
+              title={t("nav.call_us")}
+            >
               <PhoneCall size={13} strokeWidth={2.5} />
-              <a href="tel:+33620357667" className="dark:text-amber-400">
-                <b>06 20 35 76 67</b>
-              </a>
-            </span>
-            <div className="flex items-center gap-2">
+              <span className="hidden sm:inline">06 20 35 76 67</span>
+            </a>
+
+            <div className="flex items-center gap-1.5 shrink-0">
               {/* Sélecteur de langue mobile */}
-              <div className="flex bg-slate-950/10 rounded-lg p-0.5 text-[10px] select-none scale-90">
+              <div className="flex bg-slate-950/10 rounded-lg p-0.5 text-[10px] select-none">
                 <button
                   onClick={() => setLanguage("fr")}
-                  className={`px-2 py-0.5 rounded-md font-bold uppercase transition-all cursor-pointer ${
+                  className={`px-1.5 py-0.5 rounded-md font-bold uppercase transition-all cursor-pointer ${
                     language === "fr" ? "bg-slate-900 text-white shadow-xs" : "text-slate-700"
                   }`}
                 >
@@ -193,7 +197,7 @@ const Navbar = ({
                 </button>
                 <button
                   onClick={() => setLanguage("tr")}
-                  className={`px-2 py-0.5 rounded-md font-bold uppercase transition-all cursor-pointer ${
+                  className={`px-1.5 py-0.5 rounded-md font-bold uppercase transition-all cursor-pointer ${
                     language === "tr" ? "bg-slate-900 text-white shadow-xs" : "text-slate-700"
                   }`}
                 >

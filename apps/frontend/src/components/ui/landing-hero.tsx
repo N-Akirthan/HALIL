@@ -57,10 +57,9 @@ function Hero() {
 
   return (
     <div
-      className="relative flex justify-center items-center bg-cover bg-center transition-all duration-1000"
+      className="relative flex justify-center items-center bg-cover bg-center transition-all duration-1000 py-12 sm:py-16 md:py-24 min-h-[420px] md:h-[calc(100vh-17rem)]"
       style={{
         backgroundImage: `url(${sliderImages[currentSlide]})`,
-        height: "calc(100vh - 17rem)",
       }}
     >
       {/* Overlay de fond pour meilleur contraste */}
@@ -76,14 +75,14 @@ function Hero() {
         />
       </div>
 
-      <div className="container mx-auto my-auto z-10">
-        <div className="flex gap-8 items-center mt-4 justify-center flex-col">
-          <div className="flex gap-4 flex-col px-4">
-            <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+      <div className="container mx-auto my-auto z-10 px-4">
+        <div className="flex gap-6 sm:gap-8 items-center mt-2 justify-center flex-col">
+          <div className="flex gap-3 sm:gap-4 flex-col">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-bold">
               <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                 {t("hero.title_part_1")}
               </span>
-              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
+              <span className="relative flex w-full justify-center overflow-hidden text-center h-12 sm:h-16 md:h-20 md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
@@ -103,7 +102,7 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight max-w-2xl text-center text-white">
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed tracking-tight max-w-2xl text-center text-white px-2">
               {t("hero.subtitle")}
             </p>
           </div>

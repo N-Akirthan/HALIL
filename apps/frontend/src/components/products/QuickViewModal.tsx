@@ -36,8 +36,8 @@ export function QuickViewModal({ product, isOpen, onClose, onQuoteRequest }: Pro
     activeProduct.size;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4">
-      <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl max-w-3xl w-full border border-slate-100 dark:border-slate-800 overflow-hidden text-left relative transition-all duration-200 animate-in fade-in zoom-in-95 max-h-[90vh] flex flex-col transition-colors duration-300">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-2 sm:p-4">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl w-[95vw] max-w-3xl border border-slate-100 dark:border-slate-800 overflow-hidden text-left relative transition-all duration-200 animate-in fade-in zoom-in-95 max-h-[92vh] flex flex-col transition-colors duration-300">
         
         {/* En-tête */}
         <div className="px-6 py-4 bg-slate-50 dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">

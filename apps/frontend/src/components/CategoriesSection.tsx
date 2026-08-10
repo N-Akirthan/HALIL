@@ -67,21 +67,21 @@ export default function CategoriesSection() {
         </Link>
 
         {/* Flex gauche/droite */}
-        <div className="flex flex-col md:flex-row gap-8 w-full px-2">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-8 w-full px-3">
           {/* Colonne gauche */}
-          <div className="flex-1 grid grid-cols-2 gap-2">
+          <div className="flex-1 grid grid-cols-2 gap-3">
             {categoriesLeft.map((cat, idx) => (
               <Link
                 key={idx}
                 href={cat.href}
-                className="relative group rounded-lg overflow-hidden shadow-md"
+                className="relative group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
                 <Image
                   src={cat.image}
                   alt={cat.name}
                   width={400}
                   height={400}
-                  className="w-full h-50 group-hover:scale-105 transition-transform"
+                  className="w-full h-36 sm:h-44 md:h-52 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 transition flex items-center justify-center"></div>
               </Link>
@@ -89,19 +89,19 @@ export default function CategoriesSection() {
           </div>
 
           {/* Colonne droite */}
-          <div className="flex-1 grid grid-cols-2 gap-2">
+          <div className="flex-1 grid grid-cols-2 gap-3">
             {categoriesRight.map((cat, idx) => (
               <Link
                 key={idx}
                 href={cat.href}
-                className="relative group rounded-lg overflow-hidden shadow-md"
+                className="relative group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
                 <Image
                   src={cat.image}
                   alt={cat.name}
                   width={400}
                   height={400}
-                  className="w-full h-50 group-hover:scale-105 transition-transform"
+                  className="w-full h-36 sm:h-44 md:h-52 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 transition flex items-center justify-center"></div>
               </Link>

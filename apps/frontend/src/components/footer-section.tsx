@@ -116,9 +116,9 @@ export function Footer() {
           </div>
         </AnimatedContainer>
 
-        <div className="mt-0 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
+        <div className="mt-8 xl:mt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 xl:col-span-2">
           <AnimatedContainer delay={0.1}>
-            <div className="mb-10 md:mb-0">
+            <div className="mb-6 md:mb-0">
               <h3 className="text-xs font-bold">{dynamicFooterLinks[0].label}</h3>
               <ul className="text-white mt-4 space-y-2 text-sm">
                 {dynamicFooterLinks[0].links.map((link: any) => (
@@ -136,7 +136,7 @@ export function Footer() {
             </div>
           </AnimatedContainer>
 
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="col-span-1 sm:col-span-1 md:col-span-3 flex flex-col sm:flex-row flex-wrap gap-8 md:gap-10">
             {[dynamicFooterLinks[1], dynamicFooterLinks[2], dynamicFooterLinks[3]].map((section, index) => (
               <AnimatedContainer key={section.label} delay={0.2 + index * 0.1}>
                 <div className="mb-10 md:mb-0">

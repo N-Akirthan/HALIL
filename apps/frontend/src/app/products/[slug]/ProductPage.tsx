@@ -75,8 +75,8 @@ export default function ProductPage({ slug }: { slug: string }) {
     <div className="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
       <AdBar />
       <Navbar />
-      <div className="px-4 md:px-20 py-12">
-        <div className="mb-8">
+      <div className="px-3 sm:px-8 md:px-20 py-6 sm:py-12">
+        <div className="mb-6 sm:mb-8">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -98,7 +98,7 @@ export default function ProductPage({ slug }: { slug: string }) {
           </Breadcrumb>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-12">
+        <div className="flex flex-col md:flex-row gap-6 sm:gap-12">
           {/* Image principale + miniatures */}
           <div className="md:w-1/2 w-full">
             <ZoomImage
@@ -114,7 +114,7 @@ export default function ProductPage({ slug }: { slug: string }) {
                     src={img}
                     alt={`${activeProduct.name} ${index + 1}`}
                     onClick={() => setSelectedImageIndex(index)}
-                    className={`h-20 w-20 object-contain border rounded cursor-pointer transition ${
+                    className={`h-16 w-16 sm:h-20 sm:w-20 object-contain border rounded-xl cursor-pointer transition ${
                       selectedImageIndex === index
                         ? "border-[#ebc834] ring-2 ring-[#ebc834]"
                         : "border-gray-200 dark:border-slate-800"
@@ -130,15 +130,15 @@ export default function ProductPage({ slug }: { slug: string }) {
                 <button
                   onClick={scrollLeft}
                   aria-label="Scroll left"
-                  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-slate-800 p-2 rounded-full shadow hover:bg-gray-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-100"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-slate-800 p-1.5 rounded-full shadow hover:bg-gray-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-100"
                 >
-                  <ChevronLeft size={20} />
+                  <ChevronLeft size={18} />
                 </button>
 
                 {/* Miniatures scrollables */}
                 <div
                   ref={thumbnailRef}
-                  className="flex gap-3 overflow-x-auto no-scrollbar mx-12"
+                  className="flex gap-3 overflow-x-auto no-scrollbar mx-8 sm:mx-12"
                   style={{ scrollbarWidth: "none" }}
                 >
                   {product.variants.map((variant) => (

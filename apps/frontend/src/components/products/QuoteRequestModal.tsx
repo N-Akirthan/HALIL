@@ -64,8 +64,8 @@ export function QuoteRequestModal({ isOpen, onClose, productName = "" }: Props) 
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-xs p-4">
-      <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl max-w-lg w-full border border-gray-150 dark:border-slate-800 overflow-hidden text-left relative transition-all duration-200 animate-in fade-in zoom-in-95 transition-colors duration-300">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-xs p-2 sm:p-4">
+      <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-[95vw] max-w-lg max-h-[92vh] flex flex-col border border-gray-150 dark:border-slate-800 overflow-hidden text-left relative transition-all duration-200 animate-in fade-in zoom-in-95 transition-colors duration-300">
         
         {/* Header */}
         <div className="px-6 py-4 bg-[#ebc834] dark:bg-slate-950 text-slate-900 dark:text-white flex justify-between items-center border-b border-gray-200 dark:border-slate-800">

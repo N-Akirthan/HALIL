@@ -30,7 +30,7 @@ export function ProductCard({ product, onQuickView }: Props) {
         </span>
 
         {/* Zone image + Aperçu rapide au survol */}
-        <div className="relative bg-slate-50/30 dark:bg-slate-950/40 rounded-xl w-full p-4 flex items-center justify-center h-[200px] md:h-[220px] overflow-hidden border border-gray-50/50 dark:border-slate-800 group/image">
+        <div className="relative bg-slate-50/30 dark:bg-slate-950/40 rounded-xl w-full p-2 sm:p-4 flex items-center justify-center h-[140px] sm:h-[180px] md:h-[220px] overflow-hidden border border-gray-50/50 dark:border-slate-800 group/image">
           <img
             src={product.images[0]}
             alt={product.name}
@@ -39,8 +39,8 @@ export function ProductCard({ product, onQuickView }: Props) {
 
           {/* Pastille 6/6 ou 9/9 en bas à droite de l'image */}
           {cutSize && (
-            <div className="absolute bottom-2.5 right-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-2.5 py-0.5 shadow-md z-10 pointer-events-none select-none">
-              <span className="font-extrabold italic text-slate-900 dark:text-slate-100 text-xs sm:text-sm tracking-tight font-serif">
+            <div className="absolute bottom-1.5 right-1.5 sm:bottom-2.5 sm:right-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-2 py-0.5 shadow-md z-10 pointer-events-none select-none">
+              <span className="font-extrabold italic text-slate-900 dark:text-slate-100 text-[10px] sm:text-xs tracking-tight font-serif">
                 {cutSize}
               </span>
             </div>
@@ -55,7 +55,7 @@ export function ProductCard({ product, onQuickView }: Props) {
                 e.stopPropagation();
                 onQuickView(product);
               }}
-              className="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 font-extrabold text-[9px] tracking-wider uppercase px-4 py-2.5 rounded-xl shadow-md transform scale-90 group-hover/image:scale-100 transition-all duration-300 cursor-pointer border border-slate-150 dark:border-slate-700"
+              className="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 font-extrabold text-[9px] tracking-wider uppercase px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl shadow-md transform scale-90 group-hover/image:scale-100 transition-all duration-300 cursor-pointer border border-slate-150 dark:border-slate-700"
             >
               {t("catalog.quick_view")}
             </button>

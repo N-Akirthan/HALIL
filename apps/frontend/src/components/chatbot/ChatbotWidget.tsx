@@ -91,17 +91,17 @@ export function ChatbotWidget() {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-[99] text-left">
+    <div className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-[99] text-left">
       
       {/* Bulle de Chat Flottante */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-[#ebc834] hover:bg-[#dfca70] text-slate-900 p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center relative cursor-pointer group"
+          className="bg-[#ebc834] hover:bg-[#dfca70] text-slate-900 p-3.5 sm:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center relative cursor-pointer group"
           aria-label="Ouvrir le chat"
         >
-          <MessageSquare className="w-6 h-6 animate-pulse" />
-          <div className="absolute right-16 bg-slate-900 text-white font-bold text-[10px] tracking-wider uppercase py-1.5 px-3 rounded-xl shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap select-none">
+          <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" />
+          <div className="absolute right-16 bg-slate-900 text-white font-bold text-[10px] tracking-wider uppercase py-1.5 px-3 rounded-xl shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap select-none hidden sm:block">
             {t("bot.help_bubble")}
           </div>
         </button>
@@ -109,7 +109,7 @@ export function ChatbotWidget() {
 
       {/* Fenêtre de Chat */}
       {isOpen && (
-        <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800 w-[350px] sm:w-[400px] h-[500px] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800 w-[calc(100vw-24px)] sm:w-[400px] max-w-[400px] h-[75vh] max-h-[500px] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200 text-slate-800 dark:text-slate-100 transition-colors duration-300">
           
           {/* Header */}
           <div className="bg-[#ebc834] dark:bg-slate-950 text-slate-900 dark:text-white px-5 py-4 flex justify-between items-center border-b border-gray-200 dark:border-slate-800 select-none">
