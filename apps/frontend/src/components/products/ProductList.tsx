@@ -65,7 +65,7 @@ export function ProductList({ products, onQuickView }: Props) {
             </h3>
 
             {/* Grille de la catégorie */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-stretch">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4 items-stretch">
               {categoryProducts.map((product) => (
                 <ProductCard 
                   key={product.id} 

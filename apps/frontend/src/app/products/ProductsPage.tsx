@@ -212,7 +212,7 @@ export default function ProductsPage() {
         </div>
 
         {/* Section principale */}
-        <div className="flex flex-col md:flex-row gap-8 px-4 md:px-20 py-12">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-8 px-2 sm:px-4 md:px-20 py-6 sm:py-12">
           {/* Colonne Filtres */}
           <div className="lg:w-1/5 md:w-1/4 w-full md:sticky md:top-10 h-fit">
             <ProductFilters
