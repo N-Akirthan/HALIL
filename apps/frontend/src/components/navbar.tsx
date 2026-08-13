@@ -248,9 +248,9 @@ const Navbar = ({
                       </div>
                     )}
                     <div className="flex flex-col gap-3">
-                      <span className="flex items-center gap-2 text-xs whitespace-nowrap font-semibold">
-                        <PhoneCall size={13} />
-                        {t("nav.call_us")}{" "}
+                      <span className="flex items-center flex-wrap gap-x-2 gap-y-1 text-xs font-semibold">
+                        <PhoneCall size={13} className="shrink-0" />
+                        <span>{t("nav.call_us")}</span>
                         <a href="tel:+33620357667" className="dark:text-amber-400">
                           <b>06 20 35 76 67</b>
                         </a>
