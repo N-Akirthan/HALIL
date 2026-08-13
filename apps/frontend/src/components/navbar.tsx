@@ -177,11 +177,11 @@ const Navbar = ({
             
             <a 
               href="tel:+33620357667"
-              className="flex items-center gap-1 bg-slate-950/10 hover:bg-slate-950/20 px-2 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-colors"
+              className="flex items-center gap-1 bg-slate-950/10 hover:bg-slate-950/20 px-2 py-1.5 rounded-xl text-[10px] sm:text-xs font-bold shrink-0 transition-colors"
               title={t("nav.call_us")}
             >
-              <PhoneCall size={13} strokeWidth={2.5} />
-              <span className="hidden sm:inline">06 20 35 76 67</span>
+              <PhoneCall size={12} strokeWidth={2.5} />
+              <span className="tracking-tighter sm:tracking-normal">06 20 35 76 67</span>
             </a>
 
             <div className="flex items-center gap-1.5 shrink-0">
