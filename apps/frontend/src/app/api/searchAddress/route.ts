@@ -23,16 +23,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json([]);
   }
 
-  const url = `https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&q=${encodeURIComponent(
-    query
-  )}&limit=5`;
+  const url = `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(query)}&limit=5`;
 
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": "MonApp/1.0 (contact@monapp.com)",
-      "Accept-Language": "fr",
-    },
-  });
+  const res = await fetch(url);
 
   if (!res.ok) {
     return new Response("Erreur lors de la récupération des adresses", {
@@ -42,21 +35,15 @@ export async function GET(request: NextRequest) {
 
   const data = await res.json();
 
-  const filtered = data.map((item: NominatimItem) => {
-    const addr = item.address || {};
-    const city = addr.city || addr.town || addr.village || "";
+  if (!data.features) {
+    return NextResponse.json([]);
+  }
 
-    const labelParts = [
-      addr.house_number,
-      addr.road,
-      addr.postcode,
-      city,
-    ].filter(Boolean);
-
+  const filtered = data.features.map((feature: any) => {
     return {
-      label: labelParts.join(" "),
-      lat: parseFloat(item.lat),
-      lon: parseFloat(item.lon),
+      label: feature.properties.label,
+      lat: feature.geometry.coordinates[1], // GeoJSON is [lon, lat]
+      lon: feature.geometry.coordinates[0],
     };
   });
 
