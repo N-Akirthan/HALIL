@@ -242,7 +242,7 @@ export default function ProductsPage() {
                  <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
                </div>
                
-               <div className="text-[10px] font-extrabold text-[#006680] bg-[#006680]/5 px-4 py-2 rounded-full uppercase tracking-widest select-none">
+               <div className="hidden sm:block text-[10px] font-extrabold text-[#006680] bg-[#006680]/5 px-4 py-2 rounded-full uppercase tracking-widest select-none">
                  {filteredProductsSorted.length} {filteredProductsSorted.length === 1 ? t("catalog.stats_badge_single") : t("catalog.stats_badge_plural")}
                </div>
              </div>

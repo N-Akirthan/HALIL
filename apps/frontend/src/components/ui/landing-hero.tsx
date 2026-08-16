@@ -78,11 +78,11 @@ function Hero() {
       <div className="container mx-auto my-auto z-10 px-4">
         <div className="flex gap-6 sm:gap-8 items-center mt-2 justify-center flex-col">
           <div className="flex gap-3 sm:gap-4 flex-col">
-            <h1 className="text-3xl sm:text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-bold">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl max-w-2xl tracking-tighter text-center font-bold">
               <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                 {t("hero.title_part_1")}
               </span>
-              <span className="relative flex w-full justify-center overflow-hidden text-center h-12 sm:h-16 md:h-20 md:pb-4 md:pt-1">
+              <span className="relative flex w-full justify-center overflow-hidden text-center h-10 sm:h-14 md:h-16 lg:h-20 md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
