@@ -24,7 +24,7 @@ function Hero() {
               Fondée en 1998 à Paris, HALIL distribue des produits alimentaires
               pour les professionnels de la restauration. Son catalogue comprend
               viandes, surgelés, pains et sauces. Fiable et réactive, HALIL est
-              un partenaire de confiance en Île-de-France
+              un partenaire de confiance.
             </p>
             <img
               src={"/images/halil-truck.png"}
@@ -60,7 +60,7 @@ function Hero() {
                 Fondée en 1998 à Paris, HALIL distribue des produits
                 alimentaires pour les professionnels de la restauration. Son
                 catalogue comprend viandes, surgelés, pains et sauces. Fiable et
-                réactive, HALIL est un partenaire de confiance en Île-de-France
+                réactive, HALIL est un partenaire de confiance.
               </p>
             </div>
           </div>
